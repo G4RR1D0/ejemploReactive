@@ -1,51 +1,41 @@
-import miImagen from "./assets/logo.png"
+import miImagen from "./assets/logo.jpg";
+import facebook from "./assets/facebook.png";
+import whatsapp from "./assets/whatsapp.png";
+import instagram from "./assets/instagram.png";
 
-function Encabezado(){
-    return (
-        <div>
-           <Logotipo/>
-           <Menu/>
-              <Redes/>
-        </div>
-    )
+import "./Encabezado.css";
 
+
+function Encabezado() {
+  return (
+    <header className="encabezado">
+      
+      <div className="logo">
+        <img src={miImagen} alt="Logotipo" />
+      </div>
+
+      <nav className="menu">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contactos</a></li>
+          <li><a href="#">Sucursales</a></li>
+        </ul>
+      </nav>
+
+
+
+     <div className="redes">
+    <img src={facebook} alt="Facebook"/>
+    <img src={whatsapp} alt="Whatsapp"/>
+    <img src={instagram} alt="Instagram"/>
+
+        <div/>
+      </div>
+
+    </header>
+  );
 }
-
-function Logotipo(){
-    return(
-        <div>
-            <img src={miImagen} alt='Logotipo'/>
-        </div>
-    )
-}
-
-function Menu(){
-    return(
-        <div>
-            <ul>
-                <li>Inicio</li>
-                <li>Acerca de </li>
-                <li>Productos</li>
-                <li>Contactos</li>
-                <li>Sucursales</li>
-
-            </ul>
-        </div>
-    )
-}
-
-function Redes(){
-    return(
-        <div>
-            <ul>
-                <li>Facebook</li>
-                <li>Whatsapp</li>
-                <li>Instagram</li>
-                <li>Youtube</li>
-            </ul>
-        </div>
-    )
-}
-
 
 export default Encabezado;

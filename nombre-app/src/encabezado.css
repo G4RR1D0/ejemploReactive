@@ -1,0 +1,55 @@
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #b2ace4;
+}
+
+
+.logo img {
+  height: 60px;
+}
+
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.redes ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: 40px;
+  padding: 0;
+}
+.redes img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    transition: transform 0.25s;
+}
+.redes img:hover{
+    transition: scale(1.2);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #00c3ff;
+}
