@@ -1,29 +1,31 @@
 import "./Cards.css";
+import "./assets/mario.jpg";
+import "./assets"
 
 function Cards() {
   return (
     <section className="cards">
 
       <div className="card">
-        <h3>Yaneth</h3>
+        <h3>Mario</h3>
+        <img src={marioImage} alt="Mario" />
         <p>Desarrolladora Web</p>
       </div>
 
+
       <div className="card">
-        <h3>Gadi</h3>
-        <p>Diseñador Web</p>
+        <h3>Minecraft</h3>
+         <img src={minecraftImage} alt="Menicraft" />
+        <p>juego y accion</p>
       </div>
 
       <div className="card">
         <h3>Mario</h3>
+
         <p>Líder de Proyecto</p>
       </div>
 
-      {/* Botones abajo */}
-      <div className="card-botones">
-        <button className="btn izquierda">Anterior</button>
-        <button className="btn derecha">Siguiente</button>
-      </div>
+      {}
 
     </section>
   );
