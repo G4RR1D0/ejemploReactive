@@ -1,31 +1,33 @@
 import "./Cards.css";
-import "./assets/mario.jpg";
-import "./assets"
+import marioImage from "./assets/mario.jpg";
+import minecraftImage from "./assets/minecraft.jpg";
+import pacmanImage from "./assets/pacma.jpg";
 
 function Cards() {
   return (
     <section className="cards">
 
       <div className="card">
-        <h3>Mario</h3>
-        <img src={marioImage} alt="Mario" />
-        <p>Desarrolladora Web</p>
-      </div>
-
-
-      <div className="card">
+        <img src={minecraftImage} alt="Minecraft" />
         <h3>Minecraft</h3>
-         <img src={minecraftImage} alt="Menicraft" />
-        <p>juego y accion</p>
+        <p>Aventura y creatividad</p>
+
+      
       </div>
 
       <div className="card">
+        <img src={marioImage} alt="Mario" />
         <h3>Mario</h3>
+        <p>Plataformas y diversión</p>
 
-        <p>Líder de Proyecto</p>
       </div>
 
-      {}
+      <div className="card">
+        <img src={pacmanImage} alt="Pacman" />
+        <h3>Pac-Man</h3>
+        <p>Clásico arcade</p>
+
+      </div>
 
     </section>
   );

@@ -6,14 +6,16 @@
 }
 
 .logo {
-  height: 6em;
+  height: 9em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,4 +41,39 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.cuadro-gamer{
+  width: 95%;
+  height: 350px;
+  background-image: url("/src/assets/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+  position: relative;
+}
+
+.cuadro-gamer::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  border-radius: 12px;
+}
+
+.cuadro-gamer *{
+  position: relative;
+}
+
+.cuadro-gamer h3{
+  font-size: 14px;
 }

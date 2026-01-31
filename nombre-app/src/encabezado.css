@@ -13,12 +13,12 @@
   box-sizing: border-box;
 }
 
-/* Logo */
+
 .logo img {
   width: 70px;
 }
 
-/* Menú */
+
 .menu {
   flex: 1;
   display: flex;
@@ -41,7 +41,6 @@
   position: relative;
 }
 
-/* Efecto hover en menú */
 .menu ul li a::after {
   content: "";
   position: absolute;
@@ -57,7 +56,7 @@
   width: 100%;
 }
 
-/* Redes sociales */
+
 .redes {
   display: flex;
   gap: 15px;
