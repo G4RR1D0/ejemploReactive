@@ -8,9 +8,9 @@
 
 
   background: 
-    radial-gradient(circle at top, rgba(255, 0, 0, 0.25), transparent 60%),
-    radial-gradient(circle at bottom, rgba(0, 150, 255, 0.25), transparent 60%),
-    linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    radial-gradient(circle at top, rgba(18, 20, 102, 0.25), transparent 60%),
+    radial-gradient(circle at bottom, rgba(139, 4, 4, 0.25), transparent 60%),
+    linear-gradient(135deg, #18133f, #312f46, #24243e);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

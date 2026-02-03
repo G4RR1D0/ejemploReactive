@@ -3,7 +3,11 @@ import Expresiones from "./Expresiones";
 import Cards from "./Cards";
 import "./App.css";
 
-function App() {
+function App(props) {
+  const {user}= props
+  if (user) {
+
+  }
   return (
     <div>
 
@@ -33,6 +37,7 @@ function App() {
       </div>
 
     </div>
+
   );
 }
 
