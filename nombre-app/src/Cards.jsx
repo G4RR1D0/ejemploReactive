@@ -17,6 +17,15 @@ import pcgamer from "./assets/productos/pcgamer.jpg";
 import galeria1 from "./assets/galeria2.jpg";
 import galeria2 from "./assets/galeria3.jpg";
 import galeria3 from "./assets/galeria4.jpg";
+import galeria4 from "./assets/galeria5.jpg";
+import galeria5 from "./assets/galeria6.jpg";
+import galeria6 from "./assets/galeria7.jpg";
+import galeria7 from "./assets/galeria1.jpg";
+import galeria8 from "./assets/galeria8.jpg";
+import galeria9 from "./assets/galeria9.jpg";
+import galeria10 from "./assets/galeria10.jpg";
+import galeria11  from "./assets/galeria11.jpg";
+import galeria12 from "./assets/galeria12.jpg";
 
 function Cards({ vista }) {
   if (vista === "acerca") return <AcercaCards />;
@@ -54,14 +63,14 @@ function AcercaCards() {
       <div className="cuadro-acerca">
         <h2>Acerca de Nosotros</h2>
         <p>
-          Somos una tienda especializada en productos gamer, dedicada a ofrecer
-          accesorios y equipos de alta calidad para mejorar tu experiencia de
-          juego.
+          Somos un sitio dedicado a los videojuegos y a la comunidad gamer. Aquí encontrarás noticias actualizadas, 
+          reseñas honestas, guías, trucos y recomendaciones para todo tipo de jugadores,
+          desde quienes recién empiezan hasta los más competitivos.
+          Nos apasiona el mundo de los videojuegos y creemos que jugar es más que un pasatiempo: es una forma de conectar,
+          aprender y divertirse. Nuestro objetivo es ofrecer contenido claro, entretenido y útil,
+          siempre con un enfoque cercano y auténtico para que disfrutes al máximo cada partida.
         </p>
-        <p>
-          Nuestro objetivo es brindar tecnología confiable, precios accesibles y
-          un servicio excepcional.
-        </p>
+        
       </div>
     </section>
   );
@@ -77,11 +86,13 @@ function ProductosCards() {
     { nombre: "Silla Gamer", precio: 2499, img: sillagamer },
     { nombre: "Mousepad RGB", precio: 349, img: mousepad },
     { nombre: "PC Gamer Pro", precio: 18999, img: pcgamer },
+
+
   ];
 
   return (
     <section className="productos-cards">
-      <h2>Productos Gamer</h2>
+      <h2>Productos </h2>
       <div className="productos-grid">
         {productos.map((p, i) => (
           <div key={i} className="card">
@@ -96,10 +107,10 @@ function ProductosCards() {
 }
 
 function GaleriaCards() {
-  const imagenes = [galeria1, galeria2, galeria3];
+  const imagenes = [galeria1, galeria2, galeria3,galeria4,galeria5,galeria6,galeria7,galeria8,galeria9,galeria10,galeria11,galeria12];
   return (
     <section className="galeria-cards">
-      <h2>Galería de Imágenes</h2>
+      <h2>Galería </h2>
       <div className="galeria-grid">
         {imagenes.map((img, i) => (
           <div key={i} className="card">
@@ -154,6 +165,8 @@ function SucursalesCards() {
     { nombre: "Sucursal Centro", direccion: "Av. Principal #123", ciudad: "CDMX" },
     { nombre: "Sucursal Norte", direccion: "Calle Norte #456", ciudad: "Monterrey" },
     { nombre: "Sucursal Sur", direccion: "Av. Sur #789", ciudad: "Guadalajara" },
+    { nombre: "Sucursal Este", direccion: "Av.Este #767" , ciudad: "Hidalgo" },
+
   ];
 
   return (
