@@ -2,8 +2,9 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
+
+
 
 .logo {
   height: 9em;
@@ -20,6 +21,8 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,15 +38,13 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
 }
 
-.cuadro-gamer{
+
+
+.cuadro-gamer {
   width: 95%;
   height: 350px;
   background-image: url("/src/assets/fondo.jpg");
@@ -58,22 +59,41 @@
   text-align: center;
   margin: 40px auto;
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   position: relative;
 }
 
-.cuadro-gamer::before{
+.cuadro-gamer::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.45);
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 12px;
 }
 
-.cuadro-gamer *{
+.cuadro-gamer * {
   position: relative;
 }
 
-.cuadro-gamer h3{
+.cuadro-gamer h3 {
   font-size: 14px;
+}
+
+
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.menu span {
+  cursor: pointer;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.menu span:hover {
+  text-decoration: underline;
 }

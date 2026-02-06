@@ -5,21 +5,21 @@ import instagram from "./assets/instagram.png";
 
 import "./Encabezado.css";
 
-function Encabezado() {
+function Encabezado({ setVista }) {
   return (
     <header className="encabezado">
-      
       <div className="logo">
         <img src={miImagen} alt="Logotipo" />
       </div>
 
       <nav className="menu">
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Acerca de</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Contactos</a></li>
-          <li><a href="#">Sucursales</a></li>
+          <li onClick={() => setVista("inicio")}>Inicio</li>
+          <li onClick={() => setVista("acerca")}>Acerca de</li>
+          <li onClick={() => setVista("galeria")}>Galería</li>
+          <li onClick={() => setVista("productos")}>Productos</li>
+          <li onClick={() => setVista("contactos")}>Contactos</li>
+          <li onClick={() => setVista("sucursales")}>Sucursales</li>
         </ul>
       </nav>
 
@@ -28,9 +28,10 @@ function Encabezado() {
         <img src={whatsapp} alt="Whatsapp" />
         <img src={instagram} alt="Instagram" />
       </div>
-
     </header>
   );
 }
 
+
 export default Encabezado;
+
