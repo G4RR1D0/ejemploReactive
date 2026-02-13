@@ -1,4 +1,5 @@
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import { useMemo } from "react";
 
 const containerStyle = {
   width: "100%",
@@ -11,20 +12,28 @@ function Mapa({ lat, lng, nombre }) {
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
   });
 
+
+  const center = useMemo(() => ({
+    lat: Number(lat),
+    lng: Number(lng)
+  }), [lat, lng]);
+
   if (loadError) return <div>Error cargando mapa</div>;
   if (!isLoaded) return <div>Cargando ubicación...</div>;
-
-  const center = { lat, lng };
 
   return (
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={14}
+      zoom={15}
     >
-      <Marker position={center} title={nombre} />
+      {}
+      <Marker
+        position={center}
+        title={nombre}
+      />
     </GoogleMap>
   );
 }
 
-export default Mapa;
+export default Mapa
