@@ -1,6 +1,5 @@
 import "./Cards.css";
 import Mapa from "./Mapa";
-import MapaGeolocalizacion from "./MapaGeolocalizacion";
 
 function SucursalesCards() {
   const sucursales = [
@@ -43,9 +42,13 @@ function SucursalesCards() {
             <p>{s.direccion}</p>
             <p>{s.ciudad}</p>
 
-            <div style={{ width: "100%", height: "200px", marginTop: "10px" }}>
-              <Mapa lat={s.lat} lng={s.lng} nombre={s.nombre} />
-              <MapaGeolocalizacion></MapaGeolocalizacion>
+            {/* MAPA CON RUTA */}
+            <div style={{ width: "100%", marginTop: "10px" }}>
+              <Mapa 
+                lat={s.lat} 
+                lng={s.lng} 
+                nombre={s.nombre} 
+              />
             </div>
           </div>
         ))}
