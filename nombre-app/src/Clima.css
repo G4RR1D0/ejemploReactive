@@ -1,0 +1,12 @@
+ 
+.divClima {
+    background: rgba(252, 40, 2, 0.15);
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 320px;
+    text-align: center;
+    color: rgb(90, 255, 159);
+    border: 1px solid rgba(255, 0, 0, 0.61);
+}
+
+

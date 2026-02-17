@@ -2,7 +2,7 @@ import miImagen from "./assets/logo.jpg";
 import facebook from "./assets/facebook.png";
 import whatsapp from "./assets/whatsapp.png";
 import instagram from "./assets/instagram.png";
-
+import Clima from "./Clima";
 import "./Encabezado.css";
 
 function Encabezado({ setVista }) {
@@ -28,6 +28,7 @@ function Encabezado({ setVista }) {
         <img src={whatsapp} alt="Whatsapp" />
         <img src={instagram} alt="Instagram" />
       </div>
+      <Clima> </Clima>
     </header>
   );
 }
