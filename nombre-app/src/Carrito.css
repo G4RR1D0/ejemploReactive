@@ -1,0 +1,93 @@
+
+.carrito-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.titulo-carrito {
+  font-size: 30px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+
+.lista-carritos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center; 
+}
+
+
+.card-carrito {
+  background: #ffffff;
+  width: 300px;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e6e6e6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-carrito:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+
+.card-id {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+
+.card-fecha {
+  color: #c0392b;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.subtitulo {
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+
+.lista-productos {
+  padding-left: 18px;
+  margin-bottom: 18px;
+}
+
+.lista-productos li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+
+.btn-cancelar {
+  width: 100%;
+  background-color: #e57373;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+
+.btn-cancelar:hover {
+  background-color: #d32f2f;
+  transform: scale(1.03);
+}

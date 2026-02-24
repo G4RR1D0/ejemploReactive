@@ -20,7 +20,8 @@ function Encabezado({ setVista }) {
           <li onClick={() => setVista("productos")}>Productos</li>
           <li onClick={() => setVista("contactos")}>Contactos</li>
           <li onClick={() => setVista("sucursales")}>Sucursales</li>
-          <li onClick={() => setVista("usuarios")}>Usuarios</li> {/* 👈 agregado */}
+          <li onClick={() => setVista("carrito")}>Carrito</li>
+          <li onClick={() => setVista("usuarios")}>Usuarios</li> {}
         </ul>
       </nav>
 
