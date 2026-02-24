@@ -28,7 +28,7 @@ function Mapa({ lat, lng }) {
     lng: Number(lng)
   }), [lat, lng]);
 
-  // 📍 Obtener ubicación
+ 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       (position) => {

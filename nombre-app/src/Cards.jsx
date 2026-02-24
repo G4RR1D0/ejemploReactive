@@ -4,6 +4,7 @@ import ProductosCards from "./ProductosCards";
 import GaleriaCards from "./GaleriasCards";
 import ContactosCards from "./ContactosCards";
 import SucursalesCards from "./SucursalesCards";
+import Usuarios from "./Usuarios";
 
 function Cards({ vista }) {
   if (vista === "acerca") return <AcercaCards />;
@@ -11,6 +12,7 @@ function Cards({ vista }) {
   if (vista === "galeria") return <GaleriaCards />;
   if (vista === "contactos") return <ContactosCards />;
   if (vista === "sucursales") return <SucursalesCards />;
+  if (vista === "usuarios") return <Usuarios />;
 
   return <IndexCards />;
 }

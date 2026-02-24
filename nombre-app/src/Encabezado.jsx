@@ -20,6 +20,7 @@ function Encabezado({ setVista }) {
           <li onClick={() => setVista("productos")}>Productos</li>
           <li onClick={() => setVista("contactos")}>Contactos</li>
           <li onClick={() => setVista("sucursales")}>Sucursales</li>
+          <li onClick={() => setVista("usuarios")}>Usuarios</li> {/* 👈 agregado */}
         </ul>
       </nav>
 
@@ -28,11 +29,10 @@ function Encabezado({ setVista }) {
         <img src={whatsapp} alt="Whatsapp" />
         <img src={instagram} alt="Instagram" />
       </div>
-      <Clima> </Clima>
+
+      <Clima />
     </header>
   );
 }
 
-
 export default Encabezado;
-

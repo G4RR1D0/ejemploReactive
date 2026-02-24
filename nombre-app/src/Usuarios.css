@@ -1,0 +1,64 @@
+.usuarios-container {
+  padding: 20px;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla-usuarios th {
+  background-color: #222;
+  color: white;
+}
+
+.tabla-usuarios td {
+  background-color: white;
+  color: black; 
+}
+
+.btn-editar {
+  background: orange;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-eliminar {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-agregar {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-agregar input {
+  padding: 6px;
+}
+
+.form-agregar button {
+  background: green;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
