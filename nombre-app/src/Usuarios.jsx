@@ -19,6 +19,23 @@ function Usuarios() {
       telefono: "7641123456",
       email: "lalo@gmail.com",
     },
+
+       {
+      id: 3,
+      nombre: "Luis",
+      apellidos: "Cruz Gonzalez",
+      direccion: "AV.universidad tecnologica",
+      telefono: "765678490",
+      email: "luis@gmail.com",
+    },
+       {
+      id: 4,
+      nombre: "David",
+      apellidos: "Cruz Cruz",
+      direccion: "AV.universidad tecnologica",
+      telefono: "765678904",
+      email: "david@gmail.com",
+    },
   ]);
 
   const [nuevoUsuario, setNuevoUsuario] = useState({

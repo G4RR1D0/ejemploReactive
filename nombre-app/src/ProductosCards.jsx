@@ -1,5 +1,5 @@
-import api from "./Services/api";
 import { useEffect, useState } from "react";
+import api from "./Services/api";
 import "./Cards.css";
 
 import mousegamer from "./assets/productos/mouse.jpg";
@@ -15,7 +15,13 @@ function ProductosCards() {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const imagenes = [
+  // Formulario completo
+  const [nuevoNombre, setNuevoNombre] = useState("");
+  const [nuevaImagen, setNuevaImagen] = useState("");
+  const [nuevoPrecio, setNuevoPrecio] = useState("");
+  const [nuevaDescripcion, setNuevaDescripcion] = useState("");
+
+  const imagenesIniciales = [
     mousegamer,
     tecladogamer,
     audifonosgamer,
@@ -26,7 +32,7 @@ function ProductosCards() {
     pcgamer,
   ];
 
-  const titulos = [
+  const titulosIniciales = [
     "Mouse Gamer RGB",
     "Teclado Mecánico RGB",
     "Audífonos Gamer 7.1",
@@ -37,7 +43,7 @@ function ProductosCards() {
     "PC Gamer High Performance",
   ];
 
-  const descripciones = [
+  const descripcionesIniciales = [
     "Alta precisión y sensor óptico profesional para máximo rendimiento.",
     "Switches mecánicos retroiluminados para respuesta ultrarrápida.",
     "Sonido envolvente con micrófono de alta definición.",
@@ -49,32 +55,84 @@ function ProductosCards() {
   ];
 
   useEffect(() => {
-    const obtenerProductos = async () => {
-      try {
-        const response = await api.get("/products");
-        setProductos(response.data.slice(0, 8));
-      } catch (error) {
-        console.error("Error al obtener productos:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    obtenerProductos();
+    // Creamos los productos iniciales con tus imágenes locales
+    const iniciales = titulosIniciales.map((title, i) => ({
+      id: Date.now() + i,
+      title,
+      image: imagenesIniciales[i],
+      price: (i + 1) * 500, // precio de ejemplo
+      description: descripcionesIniciales[i],
+    }));
+    setProductos(iniciales);
+    setLoading(false);
   }, []);
 
-  if (loading) return <p>Cargando...</p>;
+  const agregarProducto = () => {
+    if (!nuevoNombre || !nuevaImagen || !nuevoPrecio || !nuevaDescripcion) {
+      alert("Completa todos los campos");
+      return;
+    }
+
+    const nuevoProducto = {
+      id: Date.now(),
+      title: nuevoNombre,
+      image: nuevaImagen,
+      price: parseFloat(nuevoPrecio),
+      description: nuevaDescripcion,
+    };
+
+    setProductos([...productos, nuevoProducto]);
+
+    setNuevoNombre("");
+    setNuevaImagen("");
+    setNuevoPrecio("");
+    setNuevaDescripcion("");
+  };
+
+  if (loading) return <p className="loading">Cargando...</p>;
 
   return (
     <section className="productos-cards">
       <h2>Productos</h2>
 
+      {/* FORMULARIO */}
+      <div className="formulario-producto">
+        <h3>Agregar Nuevo Producto</h3>
+        <input
+          type="text"
+          placeholder="Nombre del producto"
+          value={nuevoNombre}
+          onChange={(e) => setNuevoNombre(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="URL de la imagen"
+          value={nuevaImagen}
+          onChange={(e) => setNuevaImagen(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Precio"
+          value={nuevoPrecio}
+          onChange={(e) => setNuevoPrecio(e.target.value)}
+        />
+        <textarea
+          placeholder="Descripción del producto"
+          value={nuevaDescripcion}
+          onChange={(e) => setNuevaDescripcion(e.target.value)}
+        />
+        <button onClick={agregarProducto}>Agregar Producto</button>
+      </div>
+
       <div className="productos-grid">
-        {productos.map((producto, i) => (
+        {productos.map((producto) => (
           <div key={producto.id} className="card">
-            <img src={imagenes[i]} alt={titulos[i]} />
-            <h3>{titulos[i]}</h3>
-            <p className="descripcion">{descripciones[i]}</p>
+            <img
+              src={producto.image}
+              alt={producto.title}
+            />
+            <h3>{producto.title}</h3>
+            <p className="descripcion">{producto.description}</p>
             <span>${producto.price} MXN</span>
           </div>
         ))}

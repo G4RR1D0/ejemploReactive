@@ -1,66 +1,68 @@
-
+/* Contenedor principal (fondo gris claro) */
 .carrito-container {
   min-height: 100vh;
-  background-color: #f5f7fa;
+  background-color: #f4f6f8;
   padding: 40px 20px;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Título */
 .titulo-carrito {
-  font-size: 30px;
-  font-weight: 600;
-  color: #2c2c2c;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2d2d2d;
   margin-bottom: 30px;
-  text-align: left;
 }
 
-
+/* Contenedor de las cards */
 .lista-carritos {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  align-items: center; 
+  align-items: center; /* centra las tarjetas */
 }
 
-
+/* Card del carrito (la cajita blanca) */
 .card-carrito {
   background: #ffffff;
   width: 300px;
   border-radius: 12px;
-  padding: 20px 22px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e6e6e6;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Efecto al pasar el mouse */
 .card-carrito:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
-
+/* ID del carrito (#1, #2) */
 .card-id {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   color: #333;
   margin-bottom: 8px;
 }
 
-
+/* Fecha en rojo */
 .card-fecha {
   color: #c0392b;
   font-weight: 600;
-  margin-bottom: 15px;
   font-size: 14px;
+  margin-bottom: 15px;
 }
 
+/* Texto "Productos" */
 .subtitulo {
-  font-weight: 700;
+  font-weight: bold;
   color: #444;
   margin-bottom: 10px;
 }
 
-
+/* Lista de productos */
 .lista-productos {
   padding-left: 18px;
   margin-bottom: 18px;
@@ -72,22 +74,58 @@
   margin-bottom: 6px;
 }
 
-
+/* Botón cancelar */
 .btn-cancelar {
   width: 100%;
   background-color: #e57373;
-  border: none;
   color: white;
+  border: none;
   padding: 10px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: background 0.3s ease, transform 0.1s ease;
 }
-
 
 .btn-cancelar:hover {
   background-color: #d32f2f;
   transform: scale(1.03);
+}
+
+.formulario-carrito {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.formulario-carrito input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.formulario-carrito input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+}
+
+.formulario-carrito button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.formulario-carrito button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }

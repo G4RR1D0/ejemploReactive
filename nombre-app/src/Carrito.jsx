@@ -23,26 +23,61 @@ function Carrito() {
     },
   ]);
 
+  // Estados para agregar nuevo carrito
+  const [productoNombre, setProductoNombre] = useState("");
+  const [productoCantidad, setProductoCantidad] = useState("");
+
   const cancelarCarrito = (id) => {
-    const nuevosCarritos = carritos.filter((c) => c.id !== id);
-    setCarritos(nuevosCarritos);
+    setCarritos(carritos.filter((c) => c.id !== id));
+  };
+
+  const agregarCarrito = () => {
+    if (!productoNombre || !productoCantidad) {
+      alert("Completa todos los campos");
+      return;
+    }
+
+    const nuevoCarrito = {
+      id: Date.now(),
+      fecha: new Date().toISOString(), // Fecha actual automáticamente
+      productos: [{ nombre: productoNombre, cantidad: parseInt(productoCantidad) }],
+    };
+
+    setCarritos([nuevoCarrito, ...carritos]);
+
+    setProductoNombre("");
+    setProductoCantidad("");
   };
 
   return (
     <div className="carrito-container">
       <h1 className="titulo-carrito">Carrito de compras</h1>
 
+      {/* FORMULARIO PARA AGREGAR */}
+      <div className="formulario-carrito">
+        <input
+          type="text"
+          placeholder="Nombre del producto"
+          value={productoNombre}
+          onChange={(e) => setProductoNombre(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Cantidad"
+          value={productoCantidad}
+          onChange={(e) => setProductoCantidad(e.target.value)}
+        />
+        <button onClick={agregarCarrito}>Agregar Carrito</button>
+      </div>
+
       <div className="lista-carritos">
         {carritos.map((carrito) => (
           <div className="card-carrito" key={carrito.id}>
-            <div className="card-id">{carrito.id}</div>
-
+            <div className="card-id">ID: {carrito.id}</div>
             <div className="card-fecha">
               {new Date(carrito.fecha).toLocaleString()}
             </div>
-
             <div className="subtitulo">Productos</div>
-
             <ul className="lista-productos">
               {carrito.productos.map((producto, index) => (
                 <li key={index}>
@@ -50,7 +85,6 @@ function Carrito() {
                 </li>
               ))}
             </ul>
-
             <button
               className="btn-cancelar"
               onClick={() => cancelarCarrito(carrito.id)}
@@ -65,13 +99,6 @@ function Carrito() {
 }
 
 export default Carrito;
-
-
-
-
-
-
-
 
 
 

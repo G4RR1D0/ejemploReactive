@@ -5,17 +5,34 @@ import GaleriaCards from "./GaleriasCards";
 import ContactosCards from "./ContactosCards";
 import SucursalesCards from "./SucursalesCards";
 import Usuarios from "./Usuarios";
+import Carrito from "./Carrito";
 
 function Cards({ vista }) {
-  if (vista === "acerca") return <AcercaCards />;
-  if (vista === "productos") return <ProductosCards />;
-  if (vista === "galeria") return <GaleriaCards />;
-  if (vista === "contactos") return <ContactosCards />;
-  if (vista === "sucursales") return <SucursalesCards />;
-  if (vista === "usuarios") return <Usuarios />;
+  switch (vista) {
+    case "acerca":
+      return <AcercaCards />;
 
-  return <IndexCards />;
+    case "productos":
+      return <ProductosCards />;
+
+    case "galeria":
+      return <GaleriaCards />;
+
+    case "contactos":
+      return <ContactosCards />;
+
+    case "sucursales":
+      return <SucursalesCards />;
+
+    case "usuarios":
+      return <Usuarios />;
+
+    case "carrito":
+      return <Carrito />;
+
+    default:
+      return <IndexCards />;
+  }
 }
 
 export default Cards;
-

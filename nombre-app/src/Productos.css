@@ -1,50 +1,135 @@
-.productos-container {
-  padding: 40px;
-  text-align: center;
+/* Contenedor principal */
+.productos-cards {
+  padding: 30px 20px;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
 }
 
-.productos-container h2 {
+/* Títulos */
+.productos-cards h2,
+.productos-cards h3 {
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+/* Formulario: fondo oscuro, con padding y bordes redondeados */
+.formulario-producto {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
   margin-bottom: 30px;
-  font-size: 28px;
+  align-items: center;
 }
 
+/* Inputs y textarea estilo oscuro */
+.formulario-producto input,
+.formulario-producto textarea {
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #eee;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Placeholder más claro */
+.formulario-producto input::placeholder,
+.formulario-producto textarea::placeholder {
+  color: #888;
+}
+
+/* Focus azul neón */
+.formulario-producto input:focus,
+.formulario-producto textarea:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px #1e90ff;
+  outline: none;
+}
+
+/* Inputs con ancho fijo para que no se estiren */
+.formulario-producto input {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+/* Textarea flexible para descripción */
+.formulario-producto textarea {
+  flex-grow: 1;
+  resize: vertical;
+  min-height: 40px;
+  max-height: 80px;
+}
+
+/* Botón llamativo con degradado y sombra */
+.formulario-producto button {
+  background: linear-gradient(45deg, #1e90ff, #005fcb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+  font-size: 15px;
+}
+
+/* Hover botón */
+.formulario-producto button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(30, 144, 255, 0.9);
+}
+
+/* Grid de productos */
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.producto-card {
-  background: white;
+/* Tarjetas */
+.card {
+  background: #1f1f1f;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
 }
 
-.producto-card:hover {
-  transform: translateY(-5px);
+.card:hover {
+  transform: translateY(-6px);
 }
 
-.producto-card h3 {
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 12px;
   font-size: 18px;
-  margin-bottom: 10px;
 }
 
-.producto-card p {
+.card .descripcion {
   font-size: 14px;
-  color: #555;
+  color: #bbb;
+  margin: 8px 0;
 }
 
-.precio {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-.loading {
-  text-align: center;
-  font-size: 20px;
-  padding: 40px;
+.card span {
+  font-weight: 700;
+  color: #1e90ff;
 }
