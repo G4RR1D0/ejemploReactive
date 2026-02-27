@@ -11,7 +11,7 @@ function IndexCards() {
         <div className="card">
           <img src={minecraftImage} alt="Minecraft" />
           <h3>Minecraft</h3>
-          <p>Juego tipo sandbox...</p>
+          <p>Juego para crear todo lo que puedas imagen...</p>
         </div>
 
         <div className="card">

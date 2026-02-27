@@ -7,11 +7,12 @@ function Carrito() {
       id: 1,
       fecha: "2020-03-02T00:00:00.000Z",
       productos: [
-        { nombre: "Producto #1", cantidad: 4 },
-        { nombre: "Producto #2", cantidad: 1 },
-        { nombre: "Producto #3", cantidad: 0 },
+        { nombre: "Manzana", cantidad: 4 },
+        { nombre: "Chocolate ", cantidad: 1 },
+        { nombre: "Pastel ", cantidad: 6 },
       ],
     },
+
     {
       id: 2,
       fecha: "2020-01-02T00:00:00.000Z",
@@ -23,7 +24,7 @@ function Carrito() {
     },
   ]);
 
-  // Estados para agregar nuevo carrito
+  // Estados para agregar nuevo carrito jsjjjsjj :)
   const [productoNombre, setProductoNombre] = useState("");
   const [productoCantidad, setProductoCantidad] = useState("");
 
@@ -39,7 +40,7 @@ function Carrito() {
 
     const nuevoCarrito = {
       id: Date.now(),
-      fecha: new Date().toISOString(), // Fecha actual automáticamente
+      fecha: new Date().toISOString(), 
       productos: [{ nombre: productoNombre, cantidad: parseInt(productoCantidad) }],
     };
 
@@ -47,6 +48,7 @@ function Carrito() {
 
     setProductoNombre("");
     setProductoCantidad("");
+
   };
 
   return (
@@ -97,8 +99,10 @@ function Carrito() {
     </div>
   );
 }
-
 export default Carrito;
+
+
+
 
 
 

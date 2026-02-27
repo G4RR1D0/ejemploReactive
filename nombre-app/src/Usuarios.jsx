@@ -11,6 +11,7 @@ function Usuarios() {
       telefono: "7641098593",
       email: "yanethgarrido027@gmail.com",
     },
+
     {
       id: 2,
       nombre: "Lalo",
@@ -36,6 +37,7 @@ function Usuarios() {
       telefono: "765678904",
       email: "david@gmail.com",
     },
+
   ]);
 
   const [nuevoUsuario, setNuevoUsuario] = useState({
@@ -92,7 +94,7 @@ function Usuarios() {
       direccion: "",
       telefono: "",
       email: "",
-    });
+    }); 
   };
 
   return (
@@ -182,15 +184,16 @@ function Usuarios() {
                   className="btn-editar"
                   onClick={() => editarUsuario(usuario)}
                 >
-                  ✏️
+                  Editar
                 </button>
               </td>
               <td>
                 <button
                   className="btn-eliminar"
                   onClick={() => eliminarUsuario(usuario.id)}
+            
                 >
-                  ❌
+                  Eliminar
                 </button>
               </td>
             </tr>
